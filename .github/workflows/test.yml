@@ -1,0 +1,12 @@
+name: Github Action Test
+on: push
+jobs:
+   runs-on: ubuntu-latest
+   steps:
+      - uses: actions/checkout@v3
+      - name: run lint
+      run: |
+      npm install
+      npm run test
+      npm run lint
+      npm run build
